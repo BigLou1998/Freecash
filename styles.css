@@ -1,117 +1,190 @@
 body {
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(to bottom right, #0D0F1A, #1C1E2A);
-        margin: 0;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        box-sizing: border-box;
-        color: #FFFFFF;
-    }
-    .container {
-        background: #1C1E2A;
-        border-radius: 16px;
-        box-shadow: 0 0 15px rgba(26, 188, 156, 0.15);
-        max-width: 420px;
-        width: 100%;
-        padding: 25px 20px;
-        text-align: center;
-    }
-    .main-display-image {
-        width: 100%;
-        border-radius: 12px;
-        margin-bottom: 20px;
-    }
-    .reward-progress p {
-        font-size: 0.95em;
-        margin-bottom: 8px;
-        color: #FFFFFF;
-        font-weight: 600;
-    }
-    .progress-bar-container {
-        background-color: #333333;
-        border-radius: 5px;
-        height: 10px;
-        overflow: hidden;
-    }
-    .progress-bar {
-        background-color: #01d676;
-        width: 33%;
-        height: 100%;
-    }
-    .instructions-header {
-        font-size: 1.4em;
-        font-weight: 700;
-        margin: 25px 0 20px;
-        color: #FFFFFF;
-    }
-    .quick-start-guide {
-        background: #2A2C3A;
-        border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 25px;
-        text-align: left;
-    }
-    .quick-start-guide h3 {
-        font-size: 1.1em;
-        margin-bottom: 15px;
-        font-weight: 600;
-        color: #01d676;
-    }
-    .quick-start-guide ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .quick-start-guide li {
-        display: flex;
-        align-items: start;
-        margin-bottom: 15px;
-    }
-    .quick-start-guide .icon {
-        background-color: #01d676;
-        color: #0D0F1A;
-        font-weight: bold;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 12px;
-        font-size: 0.8em;
-    }
-    .text-main {
-        font-weight: 600;
-        color: #FFFFFF;
-    }
-    .text-sub {
-        font-size: 0.85em;
-        color: #CCCCCC;
-    }
-    .start-earning-btn {
-        display: block;
-        background: linear-gradient(to right, #01d676, #17A589);
-        color: #0D0F1A;
-        padding: 15px;
-        border-radius: 30px;
-        font-weight: bold;
-        font-size: 1.1em;
-        text-decoration: none;
-        margin: 0 auto 20px;
-        transition: background 0.2s;
-    }
-    .start-earning-btn:hover {
-        background: linear-gradient(to right, #17A589, #01d676);
-    }
-    .footer-text {
-        font-size: 0.8em;
-        color: #CCCCCC;
-        text-align: center;
-    }
-    .footer-text .lock-icon {
-        font-size: 1em;
-        margin-right: 5px;
-    }
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    background: #010101;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glow-a {
+    width: 320px;
+    height: 320px;
+    background: #7878ec;
+    opacity: 0.34;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-78%);
+}
+
+.glow-b {
+    width: 260px;
+    height: 260px;
+    background: #9a59f5;
+    opacity: 0.28;
+    top: 80px;
+    left: 50%;
+    transform: translateX(18%);
+}
+
+.glow-c {
+    width: 220px;
+    height: 220px;
+    background: #580099;
+    opacity: 0.4;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-30%);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+}
+
+.brand {
+    margin: 0 0 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.title {
+    margin: 0 0 32px;
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+    font-size: 2.6rem;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    background: linear-gradient(90deg, #4102f3 0%, #9a59f5 54%, #580099 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.card {
+    background: #010101;
+    border: 1px solid #2b2b2b;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin-bottom: 16px;
+}
+
+.reward-progress p {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.progress-bar-container {
+    background: #2b2b2b;
+    border-radius: 60px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 33%;
+    height: 100%;
+    background: #854bf9;
+}
+
+.quick-start-guide {
+    text-align: left;
+}
+
+.quick-start-guide h2 {
+    margin: 0 0 18px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.quick-start-guide ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.quick-start-guide li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: 1px solid #2b2b2b;
+}
+
+.quick-start-guide li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.quick-start-guide li:last-child {
+    padding-bottom: 0;
+}
+
+.step {
+    flex: 0 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 60px;
+    background: #854bf9;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-main {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.text-sub {
+    color: #fffc;
+    font-size: 0.9rem;
+}
+
+.start-earning-btn {
+    display: block;
+    margin: 8px 0 18px;
+    padding: 16px 24px;
+    border-radius: 60px;
+    background: #854bf9;
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.start-earning-btn:hover {
+    background: #9a59f5;
+}
+
+.footer-text {
+    margin: 0;
+    color: #fffc;
+    font-size: 0.85rem;
+}
